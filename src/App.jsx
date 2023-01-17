@@ -1,7 +1,12 @@
 import { useState } from "react";
+import Login from "./Pages/Login";
 
 function App() {
-  return <div>Emeka</div>;
+  return (
+    <div>
+      <Login />
+    </div>
+  );
 }
 
 export default App;
