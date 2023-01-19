@@ -4,11 +4,13 @@ import SideBar from "../components/Sidebar";
 
 function DefaultLayout({ children }) {
   return (
-    <>
+    <main>
       <Navbar />
-      {children}
-      <SideBar />
-    </>
+      <main className="default">
+        <SideBar />
+        {children}
+      </main>
+    </main>
   );
 }
 export default DefaultLayout;

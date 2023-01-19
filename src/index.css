@@ -9,6 +9,9 @@ body {
   width: 20px;
   height: 20px;
 }
+.lendsqr {
+  width: 70px;
+}
 .logo {
   display: flex;
   justify-content: center;
@@ -100,6 +103,7 @@ span {
   margin-top: 20px;
   cursor: pointer;
 }
+
 nav {
   display: flex;
   justify-content: space-between;
@@ -108,28 +112,25 @@ nav {
   position: sticky;
   top: 0px;
   font-family: "Work Sans", sans-serif;
-  height: 50px;
+  height: 40px;
   background-color: white;
 }
-
+.bars {
+  font-size: 25px;
+  color: #39cdcc;
+}
 nav .logos {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 170px;
+  width: 95px;
   height: 40px;
-}
-.navInput {
-  display: flex;
-  position: relative;
-  justify-content: center;
-  align-items: center;
 }
 
 .navInput input {
   border-width: thin;
   padding: 10px;
-  width: 400px;
+  width: 170px;
   border-radius: 8px;
   border-color: lightgrey;
   border: 1px solid #213f7d;
@@ -144,21 +145,20 @@ nav .logos {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 38px;
+  height: 37px;
   background: #39cdcc;
-  /* padding: ; */
   position: absolute;
-  right: 0.5px;
-
+  right: 20px;
+  top: 22px;
   border: none;
-  width: 50px;
+  width: 30px;
   border-radius: 0px 8px 8px 0px;
 }
 
 .navicons {
   padding: 10px;
-  width: 300px;
-  display: flex;
+  width: 280px;
+  display: none;
   justify-content: space-between;
   align-items: center;
 }
@@ -166,6 +166,7 @@ nav .logos {
   font-size: 25px;
 }
 .doc {
+  color: #213f7d;
   border-bottom: 1px solid lightgray;
 }
 .userImg {
@@ -194,16 +195,20 @@ nav .logos {
   margin-top: 20px;
 }
 aside {
+  display: none;
   padding: 30px 0px;
   font-family: "Work Sans", sans-serif;
   border-color: rgb(230, 226, 226);
   border-width: thin;
-  position: fixed;
+  position: sticky;
+  top: 80px;
   overflow-y: scroll;
-  width: 300px;
-  height: 100vh;
+  width: 30%;
+  height: calc(90vh - 90px);
 }
-
+.default {
+  display: flex;
+}
 aside div {
   padding-left: 20px;
   height: 43px;
@@ -234,27 +239,67 @@ aside p {
   border-left: 3px solid #39cdcc;
 }
 .content {
-  width: 78%;
-  height: 100vh;
-  margin-left: auto;
+  font-family: "Work Sans";
+  padding: 30px;
+  width: 100%;
   background-color: #e5e5e5;
-  /* text-align: center; */
 }
-.test {
-  padding: 20px;
+.content h4 {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  color: #213f7d;
+}
+.container-box {
   display: flex;
-  justify-content: space-between;
-  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 14px;
 }
-.test h1 {
+.container-box div {
+  box-sizing: border-box;
+  padding: 20px;
+  width: 240px;
+  background: #ffffff;
+  border: 1px solid rgba(33, 63, 125, 0.06);
+  box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+  border-radius: 4px;
+}
+
+.container-box .icon {
+  height: 40px;
+  width: 40px;
+  border-radius: 100%;
+  text-align: center;
+  background: rgb(223, 24, 255, 0.1);
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: white;
-  width: 300px;
-  height: 150px;
 }
-@media only screen and (min-width: 680px) {
+.cons {
+  color: black;
+  font-size: 30px;
+}
+.container-box h3 {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: #545f7d;
+  margin: 10px 0px;
+}
+
+.container-box h1 {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 28px;
+  text-transform: uppercase;
+  color: #213f7d;
+}
+@media only screen and (min-width: 940px) {
   .welcome {
     margin: auto;
     display: flex;
@@ -264,7 +309,75 @@ aside p {
     gap: 10px;
     padding: 30px;
   }
+  aside {
+    display: block;
+  }
+  .Bar {
+    display: none;
+  }
+  .unionImg {
+    width: 20px;
+    height: 20px;
+  }
+  .lendsqr {
+    width: fit-content;
+  }
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    position: sticky;
+    top: 0px;
+    font-family: "Work Sans", sans-serif;
+    height: 40px;
+    background-color: white;
+  }
+  nav .logos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 170px;
+    height: 40px;
+  }
+  .navInput {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+  }
 
+  .navInput input {
+    border-width: thin;
+    padding: 10px;
+    width: 400px;
+    border-radius: 8px;
+    border-color: lightgrey;
+    border: 1px solid #213f7d;
+  }
+
+  .navicons {
+    padding: 10px;
+    width: 280px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .navInput button {
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 38px;
+    background: #39cdcc;
+    position: absolute;
+    top: auto;
+    right: 0.5px;
+    border: none;
+    width: 50px;
+    border-radius: 0px 8px 8px 0px;
+  }
   .pablo {
     margin-top: 40px;
     width: 45%;

@@ -1,11 +1,15 @@
-import { FaSearch, FaRegBell, FaAngleDown } from "react-icons/fa";
+import { FaSearch, FaRegBell, FaAngleDown, FaBars } from "react-icons/fa";
+import { Link } from "react-router-dom";
 const Navbar = () => {
   return (
     <nav>
-      <div className="logos">
-        <img src="../Union.png" alt="" className="unionImg" />
-        <img src="../lendsqr.png" alt="" />
+      <div className="Bar">
+        <FaBars className="bars" />
       </div>
+      <Link to={"/"} className="logos">
+        <img src="../Union.png" alt="" className="unionImg" />
+        <img src="../lendsqr.png" alt="" className="lendsqr" />
+      </Link>
       {/* input  */}
       <div>
         <form action="">

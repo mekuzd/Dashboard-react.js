@@ -3,10 +3,10 @@ import DefaultLayout from "../Layouts/DefaultLayouts";
 
 const Dashboard = () => {
   return (
-    <>
-      <DefaultLayout />
+    <DefaultLayout>
+      {" "}
       <Users />
-    </>
+    </DefaultLayout>
   );
 };
 export default Dashboard;
