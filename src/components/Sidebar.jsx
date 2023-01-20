@@ -8,7 +8,7 @@ import {
 
 const SideBar = () => {
   return (
-    <aside>
+    <aside className="">
       <div>
         <FaShoppingBag />
         <p> Switch Organization</p>

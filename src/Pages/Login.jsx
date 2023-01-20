@@ -1,5 +1,5 @@
 import { useState, useRef } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Login = () => {
   const [show, setshow] = useState(false);
@@ -22,10 +22,10 @@ const Login = () => {
   return (
     <>
       {/* logos  */}
-      <div className="logo">
+      <Link to={"/"} className="logo">
         <img src="../Union.png" alt="" className="unionImg" />
         <img src="../lendsqr.png" alt="" />
-      </div>
+      </Link>
 
       {/* welcome  */}
 
@@ -43,6 +43,7 @@ const Login = () => {
                 type="text"
                 placeholder="Email"
                 onChange={(e) => (state.current.email = e.target.value)}
+                className="p-4"
               />
             </div>{" "}
             <br />
@@ -51,6 +52,7 @@ const Login = () => {
                 type={show ? "text" : "password"}
                 placeholder="Password"
                 onChange={(e) => (state.current.password = e.target.value)}
+                className="p-4"
               />
               <span onClick={() => setshow(!show)}>
                 {show ? "hide" : "show"}
