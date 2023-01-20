@@ -200,8 +200,8 @@ aside {
   font-family: "Work Sans", sans-serif;
   border-color: rgb(230, 226, 226);
   border-width: thin;
-  position: sticky;
-  top: 80px;
+  position: sticky !important;
+  top: 80px !important;
   overflow-y: scroll;
   width: 30%;
   height: calc(90vh - 90px);
@@ -254,13 +254,12 @@ aside p {
 .container-box {
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
-  gap: 14px;
+  justify-content: space-between;
 }
 .container-box div {
   box-sizing: border-box;
-  padding: 20px;
-  width: 240px;
+  padding: 10px;
+  width: 220px;
   background: #ffffff;
   border: 1px solid rgba(33, 63, 125, 0.06);
   box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
@@ -279,7 +278,6 @@ aside p {
 }
 .cons {
   color: black;
-  font-size: 30px;
 }
 .container-box h3 {
   font-style: normal;
@@ -299,6 +297,44 @@ aside p {
   text-transform: uppercase;
   color: #213f7d;
 }
+
+table {
+  padding: 10px;
+  width: 100%;
+  margin: 30px auto;
+  border-width: thin;
+  background: #ffffff;
+  border: 1px solid rgba(33, 63, 125, 0.06);
+  box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+  border-radius: 4px;
+}
+
+table div {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #545f7d;
+  width: fit-content;
+}
+tr,
+th,
+td {
+  padding: 10px;
+}
+
+td {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  color: #545f7d;
+  line-height: 16px;
+  vertical-align: middle;
+}
+
 @media only screen and (min-width: 940px) {
   .welcome {
     margin: auto;
@@ -322,17 +358,7 @@ aside p {
   .lendsqr {
     width: fit-content;
   }
-  nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    position: sticky;
-    top: 0px;
-    font-family: "Work Sans", sans-serif;
-    height: 40px;
-    background-color: white;
-  }
+
   nav .logos {
     display: flex;
     justify-content: space-between;
@@ -350,7 +376,7 @@ aside p {
   .navInput input {
     border-width: thin;
     padding: 10px;
-    width: 400px;
+    width: 400px !important;
     border-radius: 8px;
     border-color: lightgrey;
     border: 1px solid #213f7d;
