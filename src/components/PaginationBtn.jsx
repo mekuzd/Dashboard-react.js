@@ -20,12 +20,15 @@ const PaginateBtn = ({ Users, page, setPage }) => {
 
   const handlePage = (index) => {
     setPage(index);
-    console.log(page);
   };
 
   return (
-    <main className="d-flex justify-content-between">
-      <div>Emeka</div>
+    <main className="d-flex flex-wrap justify-content-between">
+      <div className="select">
+        <p>showing</p>
+        <p>{Users.length}</p>
+        <p>out of 100</p>
+      </div>
 
       <div className="btn-container">
         <button className="p-btn" onClick={prevPage}>

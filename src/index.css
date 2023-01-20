@@ -353,6 +353,20 @@ td {
   justify-content: center;
   align-items: center;
 }
+.select {
+  width: 200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.select p {
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #545f7d;
+}
 @media only screen and (min-width: 940px) {
   .pass span {
     cursor: pointer;
