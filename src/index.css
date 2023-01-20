@@ -115,6 +115,7 @@ body {
 }
 
 nav {
+  z-index: 30;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -249,8 +250,8 @@ aside p {
 }
 .container-box div {
   box-sizing: border-box;
-  padding: 10px;
-  width: 220px;
+  padding: 20px;
+  width: 100%;
   background: #ffffff;
   border: 1px solid rgba(33, 63, 125, 0.06);
   box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
@@ -319,6 +320,31 @@ td {
   line-height: 16px;
   vertical-align: middle;
 }
+.popup p {
+  margin: 5px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  color: #545f7d;
+}
+.popup {
+  z-index: 10;
+  position: absolute;
+  top: 1px;
+  right: 1px;
+  width: 180px;
+  padding: 10px;
+  background-color: #ffffff;
+  border: 1px solid rgba(84, 95, 125, 0.04);
+  box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+  border-radius: 4px;
+}
+.popup div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 .active-Btn {
   font-family: "Work Sans";
   font-style: normal;
@@ -365,6 +391,11 @@ td {
   font-size: 14px;
   line-height: 16px;
   color: #545f7d;
+}
+@media only screen and (min-width: 480px) {
+  .container-box div {
+    width: 200px;
+  }
 }
 @media only screen and (min-width: 940px) {
   .pablo {

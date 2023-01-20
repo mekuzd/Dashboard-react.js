@@ -79,7 +79,7 @@ const Users = () => {
         </div>
       ) : (
         <div>
-          <FetchUsers Loading={Loading} Users={Users} />
+          <FetchUsers Loading={Loading} Users={Users} setUsers={setUsers} />
           <PaginateBtn Users={Users} page={page} setPage={setPage} />
         </div>
       )}
