@@ -1,13 +1,6 @@
-import { useEffect, useState } from "react";
 import Table from "react-bootstrap/Table";
-// import "bootstrap/dist/css/bootstrap.min.css";
-import http from "../Config/http";
 import { BsTextCenter } from "react-icons/bs";
-function FetchUsers() {
-  const [Users, setUsers] = useState([]);
-  const [Loading, setLoading] = useState(true);
-  const [date, setDate] = useState();
-
+function FetchUsers({ Loading, Users }) {
   let Month = [
     "Jan",
     "Feb",
@@ -22,26 +15,15 @@ function FetchUsers() {
     "Nov",
     "Dec",
   ];
-  let isMounted = true;
 
-  useEffect(() => {
-    const fetchUsers = async () => {
-      try {
-        const response = await http("/users");
-        setUsers(response.data);
-        setLoading(false);
-      } catch (error) {
-        setUsers([]);
-      }
-    };
-    if (isMounted) {
-      fetchUsers();
-    }
-    return () => {
-      isMounted = false;
-    };
-  }, []);
-  console.log(Users);
+  if (Loading) {
+    return (
+      <div className="w-25 m-auto pt-3">
+        <div className="spinner-border "></div>
+      </div>
+    );
+  }
+
   return (
     <Table responsive>
       <thead>

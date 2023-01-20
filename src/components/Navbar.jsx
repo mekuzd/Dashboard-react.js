@@ -2,7 +2,7 @@ import { FaSearch, FaRegBell, FaAngleDown, FaBars } from "react-icons/fa";
 import { Link } from "react-router-dom";
 const Navbar = () => {
   return (
-    <nav className="p-2">
+    <nav className="p-4">
       <div className="Bar">
         <FaBars className="bars" />
       </div>

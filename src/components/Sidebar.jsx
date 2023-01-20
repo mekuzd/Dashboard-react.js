@@ -8,66 +8,98 @@ import {
 
 const SideBar = () => {
   return (
-    <aside className="">
+    <aside>
       <div>
-        <FaShoppingBag />
+        <p>
+          <FaShoppingBag />
+        </p>
         <p> Switch Organization</p>
-        <FaAngleDown />
+        <p>
+          <FaAngleDown />
+        </p>
       </div>
       <div className="dashboard">
-        <FaHome />
+        <p>
+          <FaHome />
+        </p>
         <p> Dashboard</p>
       </div>
       {/* Customers */}
       <h5> Customers</h5>
       <div className="activeTab">
-        <FaUsers />
+        <p>
+          {" "}
+          <FaUsers />
+        </p>
         <p> Users</p>
       </div>{" "}
       <div>
-        <FaUsers />
+        <p>
+          <FaUsers />
+        </p>
         <p> Guarantors</p>
       </div>{" "}
       <div>
-        <FaMoneyBill />
+        <p>
+          <FaMoneyBill />
+        </p>
         <p> Loans</p>
       </div>{" "}
       <div>
-        <FaHome />
+        <p>
+          <FaHome />
+        </p>
         <p> Desicion Models</p>
       </div>{" "}
       <div>
-        <FaHome />
+        <p>
+          <FaHome />
+        </p>
         <p> Savings</p>
       </div>{" "}
       <div>
-        <FaHome />
+        <p>
+          <FaHome />
+        </p>
         <p> Loan Request</p>
       </div>{" "}
       <div>
-        <FaHome />
+        <p>
+          <FaHome />
+        </p>
         <p> Whitelist</p>
       </div>{" "}
       <div>
-        <FaHome />
+        <p>
+          <FaHome />
+        </p>
         <p> Karma</p>
       </div>{" "}
       {/* businesses */}
       <h5>Busineses</h5>
       <div>
-        <FaHome />
+        <p>
+          <FaHome />
+        </p>
         <p> Dashboard</p>
       </div>{" "}
       <div>
-        <FaHome />
+        <p>
+          <FaHome />
+        </p>
+
         <p> Dashboard</p>
       </div>{" "}
       <div>
-        <FaHome />
+        <p>
+          <FaHome />
+        </p>
         <p> Dashboard</p>
       </div>{" "}
       <div>
-        <FaHome />
+        <p>
+          <FaHome />
+        </p>
         <p> Dashboard</p>
       </div>
     </aside>
