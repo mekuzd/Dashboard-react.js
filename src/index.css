@@ -151,6 +151,7 @@ nav .logos {
 
 .navInput input {
   width: 420px;
+  border: none;
 }
 
 .navInput button {
@@ -162,6 +163,8 @@ nav .logos {
   background: #39cdcc;
   border: none;
   border-radius: 0px 8px 8px 0px;
+  height: 44px;
+  width: 40px;
 }
 
 .navInput input:focus {
@@ -174,6 +177,7 @@ nav .logos {
 }
 .sidebarInput input {
   width: 200px;
+  border: none;
 }
 .sidebarInput input:focus {
   border-color: transparent;
@@ -188,6 +192,7 @@ nav .logos {
   background: #39cdcc;
   border: none;
   width: 50px;
+  height: 47px;
   border-radius: 0px 8px 8px 0px;
 }
 .user {
