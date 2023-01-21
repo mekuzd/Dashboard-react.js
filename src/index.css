@@ -161,7 +161,7 @@ nav .logos {
   height: 40px;
   background: #39cdcc;
   border: none;
-  width: 50px;
+  border-radius: 0px 8px 8px 0px;
 }
 
 .navInput input:focus {
@@ -254,7 +254,6 @@ aside {
   justify-content: flex-start;
   align-items: center;
   gap: 12px;
-  color: #213f7d;
   cursor: pointer;
 }
 
@@ -276,6 +275,7 @@ aside {
   font-size: 16px;
 }
 .showsidebar p {
+  color: #213f7d;
   margin: 0px;
   font-size: 16px;
 }

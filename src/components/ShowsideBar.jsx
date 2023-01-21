@@ -18,7 +18,7 @@ const ShowSideBar = ({ show, handleClose }) => {
             <input
               type="text"
               placeholder="Search for anything"
-              className="p-2 border"
+              className="p-2 "
             />
             <button>
               <FaSearch />
@@ -28,6 +28,7 @@ const ShowSideBar = ({ show, handleClose }) => {
       </Offcanvas.Header>
       <Offcanvas.Body className="py-4 p-0">
         <main className="showsidebar">
+          <p className="ms-4">docs</p>
           <div>
             <p>
               <FaShoppingBag />

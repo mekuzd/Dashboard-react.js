@@ -25,7 +25,7 @@ const Navbar = () => {
               <input
                 type="text"
                 placeholder="Search for anything"
-                className="p-2 border d-none d-lg-block"
+                className="p-2  d-none d-lg-block"
               />
               <button>
                 <FaSearch />
