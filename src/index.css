@@ -1,5 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,300;0,400;0,600;0,700;1,100;1,200;1,400;1,600&display=swap");
-
+a {
+  text-decoration: none !important;
+  color: #545f7d !important;
+}
 body {
   font-family: "Poppins", sans-serif;
   margin: 0px;
@@ -126,6 +129,7 @@ nav {
   background-color: white;
 }
 .bars {
+  cursor: pointer;
   font-size: 25px;
   color: #39cdcc;
 }
@@ -136,24 +140,68 @@ nav .logos {
   width: 95px;
   height: 40px;
 }
-
-.navInput input:focus {
-  border-color: transparent;
-  outline-color: lightgrey;
+.navInput {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #213f7d;
+  border-radius: 8px;
 }
+
+.navInput input {
+  width: 420px;
+}
+
 .navInput button {
   color: white;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 37px;
+  height: 40px;
   background: #39cdcc;
   border: none;
-  width: 30px;
+  width: 50px;
+}
+
+.navInput input:focus {
+  border-color: transparent;
+  outline: none;
+}
+.sidebarInput {
+  border-radius: 8px;
+  border: 1px solid #213f7d;
+}
+.sidebarInput input {
+  width: 200px;
+}
+.sidebarInput input:focus {
+  border-color: transparent;
+  outline: none;
+}
+.sidebarInput button {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 43px;
+  background: #39cdcc;
+  border: none;
+  width: 50px;
   border-radius: 0px 8px 8px 0px;
 }
+.user {
+  width: 150px;
+}
+.user h3 {
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  color: #213f7d;
+}
 .navicons {
-  width: 320px;
+  width: 150px;
 }
 .Bar {
   display: block;
@@ -189,12 +237,49 @@ aside {
   font-family: "Work Sans", sans-serif;
   border-color: rgb(230, 226, 226);
   border-width: thin;
-  position: sticky !important;
+  position: sticky;
   top: 100px;
   overflow-y: scroll;
   width: 30%;
   height: calc(98vh - 90px);
 }
+.showsidebar {
+  font-family: "Work Sans", sans-serif;
+}
+
+.showsidebar div {
+  padding-left: 25px;
+  height: 43px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 12px;
+  color: #213f7d;
+  cursor: pointer;
+}
+
+.showsidebar .dashboard {
+  margin: 30px 0px;
+}
+
+.showsidebar h5 {
+  padding-left: 25px;
+  margin: 15px 0px;
+  color: #545f7d;
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+}
+.showsidebar .dashboard {
+  margin: 0px;
+  font-size: 16px;
+}
+.showsidebar p {
+  margin: 0px;
+  font-size: 16px;
+}
+
 .default {
   display: flex;
 }
@@ -206,6 +291,7 @@ aside div {
   align-items: center !important;
   gap: 12px;
   color: #213f7d;
+  cursor: pointer;
 }
 aside .dashboard {
   margin: 30px 0px;
@@ -439,35 +525,6 @@ td {
     align-items: center;
     width: 170px;
     height: 40px;
-  }
-  .navInput {
-    display: flex;
-    position: relative;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .navInput input {
-    padding: 10px;
-    width: 420px;
-    border-radius: 8px;
-    border-color: lightgrey;
-    border: 1px solid #213f7d;
-  }
-
-  .navInput button {
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 40px;
-    background: #39cdcc;
-    position: absolute;
-    top: auto;
-    right: 1px;
-    border: none;
-    width: 50px;
-    border-radius: 0px 8px 8px 0px;
   }
 
   .form {

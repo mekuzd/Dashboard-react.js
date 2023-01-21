@@ -5,6 +5,7 @@ import {
   FaUsers,
   FaMoneyBill,
 } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const SideBar = () => {
   return (
@@ -31,7 +32,7 @@ const SideBar = () => {
           {" "}
           <FaUsers />
         </p>
-        <p> Users</p>
+        <Link to={"/dashboard"}> Users</Link>
       </div>{" "}
       <div>
         <p>
