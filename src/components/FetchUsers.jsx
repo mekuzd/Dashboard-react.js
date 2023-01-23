@@ -4,6 +4,7 @@ import { BiDotsVerticalRounded } from "react-icons/bi";
 import { AiOutlineEye, AiOutlineUserAdd } from "react-icons/ai";
 import { useState } from "react";
 import { GrUserExpert } from "react-icons/gr";
+import { Link } from "react-router-dom";
 
 function FetchUsers({ Loading, Users }) {
   let status = ["blacklisted", "inactive", "Active", "pending"];
@@ -12,6 +13,7 @@ function FetchUsers({ Loading, Users }) {
   const showstatusBar = (id) => {
     setid(id);
   };
+
   const getRandomStatus = () => {
     let res = status[Math.floor(Math.random() * status.length)];
     return res;
@@ -104,19 +106,19 @@ function FetchUsers({ Loading, Users }) {
                   <p>
                     <AiOutlineEye />
                   </p>{" "}
-                  <p>View Details</p>
+                  <Link to={`/dashboard/${user.id}`}>View Details</Link>
                 </div>
                 <div>
                   <p>
                     <AiOutlineUserAdd />
                   </p>
-                  <p>Blacklist User</p>
+                  <Link>Blacklist User</Link>
                 </div>
                 <div>
                   <p>
                     <GrUserExpert />{" "}
                   </p>
-                  <p>Activate User</p>
+                  <Link>Activate User</Link>
                 </div>
               </main>
               {getRandomStatus()}

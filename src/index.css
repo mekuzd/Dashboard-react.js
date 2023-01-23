@@ -483,6 +483,166 @@ td {
   line-height: 16px;
   color: #545f7d;
 }
+.header.arrowleft {
+  color: #545f7d;
+}
+.header p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #545f7d;
+}
+
+.userDetails h3 {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  color: #213f7d;
+}
+.userDetails button {
+  border-radius: 8px;
+  min-width: 100px;
+}
+.userDetails .blacklist {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border: 1px solid #e4033b;
+  padding: 10px;
+  color: #e4033b;
+}
+.userDetails .activate {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 16px;
+  border: 1px solid #39cdcc;
+  text-align: center;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #39cdcc;
+  padding: 10px;
+}
+.userInfo {
+  width: 100%;
+  background: #ffffff;
+  border: 1px solid rgba(33, 63, 125, 0.06);
+  box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+  border-radius: 4px;
+  margin: 35px auto;
+  padding: 20px 20px 0px 20px;
+}
+
+.userInfo h5 {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  color: #545f7d;
+}
+.userInfo h1 {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #213f7d;
+}
+.userInfo h2 {
+  width: 200px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  text-transform: uppercase;
+  color: #545f7d;
+}
+.userInfo h4 {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #545f7d;
+}
+.cont {
+  width: 190px;
+  padding: 10px;
+}
+.education {
+  width: 233px;
+  padding: 10px;
+}
+.userImage {
+  height: 100px;
+  width: 100px;
+  border-radius: 100%;
+  background-color: rgb(33, 63, 125, 0.16);
+}
+.fullname h3 {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 26px;
+  color: #213f7d;
+}
+.fullname p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #545f7d;
+}
+.userRate {
+  border-left: 1px solid rgb(84, 95, 125, 0.2);
+}
+.userRate h5 {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  color: #545f7d;
+}
+.userRate {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 26px;
+  color: #213f7d;
+}
+.bankDetails {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  color: #213f7d;
+}
+.butn-container .button {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.8);
+  text-align: center;
+  margin: 0px;
+  border: none;
+  background-color: #ffffff;
+}
+.activeBtn {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  color: #39cdcc;
+  border: none;
+  background-color: #ffffff;
+  box-shadow: 0px 2px #39cdcc;
+}
+hr {
+  border: 1px solid rgb(33, 63, 125, 0.1);
+}
 @media only screen and (min-width: 480px) {
   .container-box div {
     width: 200px;

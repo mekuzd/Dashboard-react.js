@@ -6,6 +6,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 const App = React.lazy(() => import("./App"));
 const Dashboard = React.lazy(() => import("./Pages/Dashboard"));
+const GeneralDetails = React.lazy(() => import("./Pages/userGeneraldetails"));
 
 const router = createBrowserRouter([
   {
@@ -15,6 +16,10 @@ const router = createBrowserRouter([
   {
     path: "/dashboard",
     element: <Dashboard />,
+  },
+  {
+    path: "/dashboard/:id",
+    element: <GeneralDetails />,
   },
 ]);
 
