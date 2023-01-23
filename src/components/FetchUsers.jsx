@@ -6,12 +6,10 @@ import { useState } from "react";
 import { GrUserExpert } from "react-icons/gr";
 
 function FetchUsers({ Loading, Users }) {
-  const [activeStatus, setactiveStatus] = useState(false);
   let status = ["blacklisted", "inactive", "Active", "pending"];
   const [id, setid] = useState(0);
 
   const showstatusBar = (id) => {
-    console.log(id);
     setid(id);
   };
   const getRandomStatus = () => {
