@@ -49,7 +49,7 @@ const GeneralDetails = () => {
           <div className="userDetails d-flex justify-content-between align-items-center mt-4 flex-wrap">
             <h3>User Details</h3>
             <div className="d-flex justify-content-between align-items-center">
-              <button className="blacklist mx-4">Blacklist user</button>
+              <button className="blacklist ">Blacklist user</button>
               <button className="ms-4 activate">activate user</button>
             </div>
           </div>
@@ -77,12 +77,12 @@ const GeneralDetails = () => {
               {/* Usersrating  */}
               <div className="p-3 userRate ms-4">
                 <h5 className="">user's tier</h5>
-                <p>
+                <div>
                   <Rate disabled value={2} className="mx-1" />
-                </p>
+                </div>
               </div>
               <div className="userRate p-3 ms-4 ">
-                <p>
+                <p className="d-flex align-items-center">
                   <TbCurrencyNaira />
                   {userDetails.accountBalance}{" "}
                 </p>
@@ -186,14 +186,14 @@ const GeneralDetails = () => {
               </div>
               <div className="education ">
                 <h2>monthly income </h2>
-                <h4>
+                <h4 className="d-flex align-items-center">
                   <TbCurrencyNaira />
                   {userDetails?.education?.monthlyIncome[0]}
                 </h4>
               </div>
               <div className="education ">
                 <h2>loan repayment </h2>
-                <h4>
+                <h4 className="d-flex align-items-center">
                   <TbCurrencyNaira />
                   {userDetails?.education?.loanRepayment}
                 </h4>

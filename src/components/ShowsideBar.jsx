@@ -18,7 +18,7 @@ const ShowSideBar = ({ show, handleClose }) => {
             <input
               type="text"
               placeholder="Search for anything"
-              className="p-2 "
+              className="p-1 "
             />
             <button>
               <FaSearch />
