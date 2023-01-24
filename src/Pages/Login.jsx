@@ -1,10 +1,16 @@
 import { useState, useRef } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import Alert from "../components/Alert";
 
 const Login = () => {
   const [show, setshow] = useState(false);
+  const [alert, setalert] = useState(false);
+  const [alertMessage, setalertMessage] = useState("");
   const navigate = useNavigate();
   const state = useRef({ email: "", password: "" });
+  const closeAlert = () => {
+    setalert(false);
+  };
 
   const handleLogin = (e) => {
     e.preventDefault();
@@ -16,7 +22,7 @@ const Login = () => {
       navigate("/dashboard");
     } else {
       setalert(true);
-      setalertMessage("Password length is less than 8");
+      setalertMessage("incorrect Login details");
     }
   };
   return (
@@ -38,8 +44,12 @@ const Login = () => {
           <p className="details">Enter details to login</p>
           <br /> <br />
           <form action="" onSubmit={handleLogin}>
+            {alert && (
+              <Alert alertMessage={alertMessage} closeAlert={closeAlert} />
+            )}
             <div>
               <input
+                required
                 type="text"
                 placeholder="Email"
                 onChange={(e) => (state.current.email = e.target.value)}
@@ -49,6 +59,7 @@ const Login = () => {
             <br />
             <div className="pass">
               <input
+                required
                 type={show ? "text" : "password"}
                 placeholder="Password"
                 onChange={(e) => (state.current.password = e.target.value)}
@@ -58,7 +69,7 @@ const Login = () => {
                 {show ? "hide" : "show"}
               </span>
             </div>
-            <p className="forgot">Forgot password</p>
+            <p className="forgot">Forgot password ?</p>
             <button type="submit">Login</button>
           </form>
         </div>
