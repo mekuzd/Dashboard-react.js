@@ -130,7 +130,11 @@ const GeneralDetails = () => {
               </div>
               <div className="cont">
                 <h2>phone number</h2>
-                <h4>{userDetails.phoneNumber}</h4>
+                <h4>
+                  {userDetails?.phoneNumber.length > 14
+                    ? userDetails?.phoneNumber.slice(0, 13)
+                    : userDetails?.phoneNumber}
+                </h4>
               </div>
               <div className="cont  ">
                 <h2>email address</h2>
@@ -217,7 +221,7 @@ const GeneralDetails = () => {
               </div>
             </main>
             <hr />
-
+            {/* guarantor  */}
             <h1 className="ms-2"> Guarantor </h1>
             <main className="d-flex justify-content-between flex-wrap">
               <div className="education">
@@ -229,7 +233,11 @@ const GeneralDetails = () => {
               </div>
               <div className="education">
                 <h2>phone number</h2>
-                <h4>{userDetails.guarantor.phoneNumber}</h4>
+                <h4>
+                  {userDetails?.guarantor?.phoneNumber.length > 14
+                    ? userDetails?.guarantor?.phoneNumber.slice(0, 13)
+                    : userDetails?.guarantor?.phoneNumber}
+                </h4>
               </div>
               <div className="education">
                 <h2>email address</h2>

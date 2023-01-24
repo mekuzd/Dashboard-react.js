@@ -630,6 +630,7 @@ td {
 }
 .butn-container button {
   width: 150px;
+  padding: 8px;
 }
 .butn-container .button {
   font-style: normal;

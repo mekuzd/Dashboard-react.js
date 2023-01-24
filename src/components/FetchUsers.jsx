@@ -77,7 +77,11 @@ function FetchUsers({ Users }) {
             <td>{user?.orgName}</td>
             <td>{user?.userName}</td>
             <td>{user?.email}</td>
-            <td>{String(user?.phoneNumber)}</td>
+            <td>
+              {user?.phoneNumber.length > 14
+                ? user?.phoneNumber.slice(0, 13)
+                : user?.phoneNumber}
+            </td>
             <td>
               {Month[new Date(user.createdAt).getMonth()]}{" "}
               {new Date(user.createdAt).getDate()},{" "}
