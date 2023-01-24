@@ -39,6 +39,14 @@ const Users = () => {
     };
   }, [page]);
 
+  if (Loading) {
+    return (
+      <div className="d-flex w-100">
+        <div className=" spinner-border m-auto"></div>
+      </div>
+    );
+  }
+
   return (
     <div className="content">
       <p>Users</p>
@@ -72,17 +80,10 @@ const Users = () => {
           <h1>500</h1>
         </div>
       </div>
-
-      {Loading ? (
-        <div className="w-25 m-auto pt-3">
-          <div className="spinner-border "></div>
-        </div>
-      ) : (
-        <div>
-          <FetchUsers Loading={Loading} Users={Users} setUsers={setUsers} />
-          <PaginateBtn Users={Users} page={page} setPage={setPage} />
-        </div>
-      )}
+      <div>
+        <FetchUsers Users={Users} setUsers={setUsers} />
+        <PaginateBtn Users={Users} page={page} setPage={setPage} />
+      </div>
     </div>
   );
 };

@@ -6,7 +6,7 @@ import { useState } from "react";
 import { GrUserExpert } from "react-icons/gr";
 import { Link } from "react-router-dom";
 
-function FetchUsers({ Loading, Users }) {
+function FetchUsers({ Users }) {
   let status = ["blacklisted", "inactive", "Active", "pending"];
   const [id, setid] = useState(0);
 
@@ -33,14 +33,6 @@ function FetchUsers({ Loading, Users }) {
     "Nov",
     "Dec",
   ];
-
-  if (Loading) {
-    return (
-      <div className="w-25 m-auto pt-3">
-        <div className="spinner-border "></div>
-      </div>
-    );
-  }
 
   return (
     <Table responsive>

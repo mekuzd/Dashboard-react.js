@@ -569,8 +569,10 @@ td {
   color: #545f7d;
 }
 .cont {
-  width: 190px;
-  padding: 10px;
+  width: 190px !important;
+  padding: 20px !important;
+  overflow-wrap: break-word;
+  /* overflow: hidden; */
 }
 .education {
   width: 233px;
@@ -580,7 +582,8 @@ td {
   height: 100px;
   width: 100px;
   border-radius: 100%;
-  background-color: rgb(33, 63, 125, 0.16);
+  overflow: hidden;
+  /* background-color: rgb(33, 63, 125, 0.16); */
 }
 .fullname h3 {
   font-style: normal;
