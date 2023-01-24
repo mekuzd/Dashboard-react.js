@@ -4,6 +4,8 @@ import { Link, useParams } from "react-router-dom";
 import http from "../Config/http";
 import { AiOutlineArrowLeft } from "react-icons/ai";
 import { TbCurrencyNaira } from "react-icons/tb";
+import { Rate } from "antd";
+
 const GeneralDetails = () => {
   const { id } = useParams();
   const [Loading, setLoading] = useState(true);
@@ -15,7 +17,6 @@ const GeneralDetails = () => {
         const response = await http.get(`/users/${id}`);
         setuserDetails(response.data);
         setLoading(false);
-        console.log(userDetails);
       } catch (error) {
         setuserDetails({});
       }
@@ -57,7 +58,7 @@ const GeneralDetails = () => {
             <div className="d-flex flex-wrap gap-3 userInfoTop">
               {/* userImage */}
 
-              <div className="d-flex justify-content-between gap-3 flex-wrap">
+              <div className="d-flex justify-content-start gap-3 flex-wrap">
                 <div className="userImage">
                   <img
                     src={userDetails.profile.avatar}
@@ -76,7 +77,9 @@ const GeneralDetails = () => {
               {/* Usersrating  */}
               <div className="p-3 userRate ms-4">
                 <h5 className="">user's tier</h5>
-                <p>rate</p>
+                <p>
+                  <Rate disabled value={2} className="mx-1" />
+                </p>
               </div>
               <div className="userRate p-3 ms-4 ">
                 <p>
@@ -88,13 +91,29 @@ const GeneralDetails = () => {
                 </p>
               </div>
             </div>
-            <div className="butn-container d-flex flex-wrap justify-content-between align-items-center mt-5">
-              <button className="activeBtn">General Details </button>
-              <button className="button">Document</button>
-              <button className="button"> Bank Details</button>
-              <button className="button">Loans</button>
-              <button className="button">Savings</button>
-              <button className="button">App and System</button>
+            <div className="butn-container d-flex  justify-content-between align-items-center mt-5">
+              <div>
+                <button className="activeBtn">General Details </button>
+              </div>
+              <div>
+                <button className="button">Document</button>
+              </div>
+              <div>
+                {" "}
+                <button className="button"> Bank Details</button>
+              </div>
+              <div>
+                {" "}
+                <button className="button">Loans</button>
+              </div>
+              <div>
+                {" "}
+                <button className="button">Savings</button>
+              </div>
+              <div>
+                {" "}
+                <button className="button">App and System</button>
+              </div>
             </div>
           </main>
 

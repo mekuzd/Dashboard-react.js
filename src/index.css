@@ -623,6 +623,14 @@ td {
   line-height: 14px;
   color: #213f7d;
 }
+
+.butn-container {
+  width: 100%;
+  overflow-x: auto;
+}
+.butn-container button {
+  width: 150px;
+}
 .butn-container .button {
   font-style: normal;
   font-weight: 400;
