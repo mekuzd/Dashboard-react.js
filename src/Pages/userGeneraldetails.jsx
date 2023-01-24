@@ -99,9 +99,9 @@ const GeneralDetails = () => {
           </main>
 
           {/* personalInfo  */}
-          <main className="userInfo p-3">
-            <h1 className="ms-2">personal information</h1>
-            <main className="d-flex justify-content-between flex-wrap ">
+          <main className="userInfo  ">
+            <h1 className="ms-3">personal information</h1>
+            <main className="d-flex justify-content-start flex-wrap   ">
               <div className="cont">
                 <h2>full name</h2>
                 <h4>
@@ -125,8 +125,7 @@ const GeneralDetails = () => {
                 <h2>gender</h2>
                 <h4>{userDetails?.profile?.gender}</h4>
               </div>
-            </main>
-            <main className="d-flex flex-wrap gap-1">
+
               <div className="cont ">
                 <h2>marital status</h2>
                 <h4>{userDetails.maritalStatus || "married"}</h4>
@@ -144,7 +143,7 @@ const GeneralDetails = () => {
             <hr />
             {/* education and employment */}
             <h1 className="ms-2"> Education and Employment </h1>
-            <main className="d-flex justify-content-between flex-wrap">
+            <main className="d-flex justify-content-start flex-wrap ">
               <div className="education">
                 <h2> level of education</h2>
                 <h4>{userDetails?.education?.level}</h4>
@@ -161,8 +160,7 @@ const GeneralDetails = () => {
                 <h2>duration of employment</h2>
                 <h4>{userDetails?.education?.duration}</h4>
               </div>
-            </main>
-            <main className="d-flex flex-wrap gap-1">
+
               <div className="education ">
                 <h2>office email</h2>
                 <h4>{userDetails?.education?.officeEmail}</h4>

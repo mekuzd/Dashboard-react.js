@@ -569,14 +569,15 @@ td {
   color: #545f7d;
 }
 .cont {
-  width: 190px !important;
-  padding: 20px !important;
+  width: 190px;
+  padding: 20px;
   overflow-wrap: break-word;
   /* overflow: hidden; */
 }
 .education {
   width: 233px;
   padding: 10px;
+  overflow-wrap: break-word;
 }
 .userImage {
   height: 100px;
