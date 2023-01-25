@@ -3,7 +3,6 @@ import { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import http from "../Config/http";
 import { AiOutlineArrowLeft } from "react-icons/ai";
-import { TbCurrencyNaira } from "react-icons/tb";
 import { Rate } from "antd";
 
 const GeneralDetails = () => {
@@ -11,6 +10,15 @@ const GeneralDetails = () => {
   const [Loading, setLoading] = useState(true);
   const [userDetails, setuserDetails] = useState({});
   let isMounted = true;
+
+  const currencyFormatter = (number) => {
+    const formatCurrency = Intl.NumberFormat("en-NG", {
+      currency: "NGN",
+      style: "currency",
+    });
+    return formatCurrency.format(number);
+  };
+
   useEffect(() => {
     const FetchUserDetails = async () => {
       try {
@@ -82,10 +90,7 @@ const GeneralDetails = () => {
                 </div>
               </div>
               <div className="userRate p-3 ms-4 ">
-                <p className="d-flex align-items-center">
-                  <TbCurrencyNaira />
-                  {userDetails.accountBalance}{" "}
-                </p>
+                <p>{currencyFormatter(userDetails.accountBalance)} </p>
                 <p className="bankDetails">
                   {userDetails.accountNumber}/providus bank
                 </p>
@@ -190,16 +195,14 @@ const GeneralDetails = () => {
               </div>
               <div className="education ">
                 <h2>monthly income </h2>
-                <h4 className="d-flex align-items-center">
-                  <TbCurrencyNaira />
-                  {userDetails?.education?.monthlyIncome[0]}
+                <h4>
+                  {currencyFormatter(userDetails?.education?.monthlyIncome[0])}
                 </h4>
               </div>
               <div className="education ">
                 <h2>loan repayment </h2>
-                <h4 className="d-flex align-items-center">
-                  <TbCurrencyNaira />
-                  {userDetails?.education?.loanRepayment}
+                <h4>
+                  {currencyFormatter(userDetails?.education?.loanRepayment)}
                 </h4>
               </div>
             </main>

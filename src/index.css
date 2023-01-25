@@ -584,8 +584,13 @@ td {
   width: 100px;
   border-radius: 100%;
   overflow: hidden;
+  object-fit: cover;
   /* background-color: rgb(33, 63, 125, 0.16); */
 }
+.userImage img {
+  object-fit: cover;
+}
+
 .fullname h3 {
   font-style: normal;
   font-weight: 500;
